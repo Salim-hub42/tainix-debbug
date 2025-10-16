@@ -26,12 +26,12 @@ while (true) {
    // Calculer la somme de la puissance totale
    let sommePuissanceTotale = puissanceTotale[0] + puissanceTotale[1] + puissanceTotale[2] + puissanceTotale[3];
 
-   if (sommePuissanceTotale <= thanos) {
+   if (sommePuissanceTotale > thanos) {
+      break;
+   } else {
       let avengerCourant = tour % power.length;
       power[avengerCourant] = power[avengerCourant] + 1;
       tour++;
-   } else {
-      break;
    }
 
 
