@@ -12,7 +12,7 @@ const thanos = 257;
 
 let power = [ironman, spiderman, captainamerica, thor];
 let puissanceTotale = [power[0] * 3 + 10, power[1] * 4 + 5, power[2] * 3 + 7, power[3] * 4 + 20];
-let tour = 0;
+let tour = 1;
 
 
 while (true) {
