@@ -11,15 +11,30 @@ const thanos = 257;
 
 
 let power = [ironman, spiderman, captainamerica, thor];
-let puissanceTotale = [power[0] + power[1] + power[2] + power[3]];
+let puissanceTotale = [power[0] * 3 + 10, power[1] * 4 + 5, power[2] * 3 + 7, power[3] * 4 + 20];
 let tour = 0;
 
 
 while (true) {
 
-   if (power < thanos) {
+
+
+
+   // Recalculer la puissance totale avec les multiplicateurs et bonus
+   puissanceTotale = [power[0] * 3 + 10, power[1] * 4 + 5, power[2] * 3 + 7, power[3] * 4 + 20];
+
+   // Calculer la somme de la puissance totale
+   let sommePuissanceTotale = puissanceTotale[0] + puissanceTotale[1] + puissanceTotale[2] + puissanceTotale[3];
+
+   if (sommePuissanceTotale <= thanos) {
       let avengerCourant = tour % power.length;
       power[avengerCourant] = power[avengerCourant] + 1;
+      tour++;
+   } else {
+      break;
    }
+
+
 }
+console.log(tour);
 
